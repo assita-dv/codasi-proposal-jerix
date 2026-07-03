@@ -77,25 +77,25 @@ export default function Home() {
             <a href="#infos" className="hover:text-[#18A7AD]">Infos</a>
           </div>
 
-          <div className="flex items-center gap-3">
-  {/* Panier */}
-  <button className="relative flex h-12 w-12 items-center justify-center rounded-full bg-[#12343B] text-white shadow-lg transition hover:scale-105">
-    <ShoppingBag size={22} />
+<div className="flex items-center gap-2">
+  <Link
+    href="/devis"
+    className="flex items-center gap-2 rounded-full border-2 border-[#12343B] bg-white px-4 py-3 text-xs font-black text-[#12343B] shadow-lg transition hover:scale-105 sm:px-5 sm:text-sm"
+  >
+    <FileText size={17} />
+    Devis
+  </Link>
+
+  <button
+    aria-label="Open cart"
+    className="relative flex h-11 w-11 items-center justify-center rounded-full bg-[#12343B] text-white shadow-lg transition hover:scale-105 sm:h-12 sm:w-12"
+  >
+    <ShoppingBag size={21} />
     <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#F4B000] text-xs font-black text-[#12343B]">
       0
     </span>
   </button>
 
-  {/* Devis */}
-  <Link
-    href="/devis"
-    className="hidden items-center gap-2 rounded-full border-2 border-[#12343B] bg-white px-5 py-3 text-sm font-black text-[#12343B] shadow-lg transition hover:scale-105 sm:flex"
-  >
-    <FileText size={18} />
-    Devis
-  </Link>
-
-  {/* Commander */}
   <button className="hidden items-center gap-2 rounded-full bg-[#F4B000] px-5 py-3 text-sm font-black text-[#12343B] shadow-lg transition hover:scale-105 sm:flex">
     <ShoppingBag size={18} />
     Commander
@@ -472,50 +472,50 @@ export default function Home() {
       </button>
 
       {/* FOOTER */}
-      <footer className="mt-10 bg-[#12343B] px-5 py-12 text-white">
-        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
-          <div>
-            <h2 className="text-2xl font-black">
-              Jerix <span className="text-[#18A7AD]">Fusion Bites</span>
-            </h2>
-            <p className="mt-3 text-white/70">
-              Pizza • Burger • Tacos • Sandwich indien — Bagneux
-            </p>
-          </div>
+<footer className="mt-10 bg-[#12343B] px-5 py-8 text-white">
+  <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-4">
+    <div>
+      <h2 className="text-xl font-black md:text-2xl">
+        Jerix <span className="text-[#18A7AD]">Fusion Bites</span>
+      </h2>
+      <p className="mt-2 text-sm text-white/70">
+        Pizza • Burger • Tacos • Sandwich indien — Bagneux
+      </p>
+    </div>
 
-          <div>
-            <h3 className="font-black text-[#F4B000]">Navigation</h3>
-            <div className="mt-4 flex flex-col gap-2 text-white/70">
-              <a href="#accueil">Accueil</a>
-              <a href="#menu">Menu</a>
-              <a href="#offres">Offres</a>
-              <a href="#infos">Infos pratiques</a>
-            </div>
-          </div>
+    <div>
+      <h3 className="font-black text-[#F4B000]">Navigation</h3>
+      <div className="mt-3 grid grid-cols-2 gap-2 text-sm text-white/70 md:flex md:flex-col">
+        <a href="#accueil">Accueil</a>
+        <a href="#menu">Menu</a>
+        <a href="#offres">Offres</a>
+        <a href="#infos">Infos pratiques</a>
+      </div>
+    </div>
 
-          <div>
-            <h3 className="font-black text-[#F4B000]">Contact</h3>
-            <div className="mt-4 text-white/70">
-              <p>01 45 46 14 82</p>
-              <p>07 88 39 02 64</p>
-              <p>11 Place des Brugnauts, Bagneux</p>
-            </div>
-          </div>
+    <div>
+      <h3 className="font-black text-[#F4B000]">Contact</h3>
+      <div className="mt-3 text-sm text-white/70">
+        <p>01 45 46 14 82</p>
+        <p>07 88 39 02 64</p>
+        <p>11 Place des Brugnauts, Bagneux</p>
+      </div>
+    </div>
 
-          <div>
-            <h3 className="font-black text-[#F4B000]">Horaires</h3>
-            <div className="mt-4 text-white/70">
-              <p>11h30 — 23h00</p>
-              <p>Fermé le mardi</p>
-              <p>Livraison autour de 1km</p>
-            </div>
-          </div>
-        </div>
+    <div>
+      <h3 className="font-black text-[#F4B000]">Horaires</h3>
+      <div className="mt-3 text-sm text-white/70">
+        <p>11h30 — 23h00</p>
+        <p>Fermé le mardi</p>
+        <p>Livraison à environ 1 km</p>
+      </div>
+    </div>
+  </div>
 
-        <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-sm text-white/50">
-          © 2026 Jerix Fusion Bites — Site de démonstration.
-        </div>
-      </footer>
+  <div className="mx-auto mt-6 max-w-7xl border-t border-white/10 pt-4 text-xs text-white/50">
+    © 2026 Jerix Fusion Bites — Site de démonstration.
+  </div>
+</footer>
     </main>
   );
 }

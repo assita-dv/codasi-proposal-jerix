@@ -5,7 +5,6 @@ import {
   CreditCard,
   LayoutDashboard,
   MapPin,
-  Phone,
   Rocket,
   ShoppingBag,
   Smartphone,
@@ -82,25 +81,23 @@ export default function QuotePage() {
 
           </div>
 
-          <div className="flex items-center gap-3">
+         <div className="flex items-center gap-2">
+  <Link
+    href="/"
+    className="flex items-center gap-2 rounded-full border-2 border-[#12343B] bg-white px-4 py-3 text-xs font-black text-[#12343B] shadow-lg transition hover:scale-105 sm:px-5 sm:text-sm"
+  >
+    <ArrowRight size={17} className="rotate-180" />
+    Home
+  </Link>
 
-            <Link
-              href="/"
-              className="hidden items-center gap-2 rounded-full border-2 border-[#12343B] bg-white px-5 py-3 text-sm font-black text-[#12343B] shadow-lg transition hover:scale-105 sm:flex"
-            >
-              <ArrowRight size={18} className="rotate-180" />
-              Home
-            </Link>
-
-            <a
-              href="#quote"
-              className="flex items-center gap-2 rounded-full bg-[#F4B000] px-5 py-3 text-sm font-black text-[#12343B] shadow-lg transition hover:scale-105"
-            >
-              <CreditCard size={18} />
-              View Quote
-            </a>
-
-          </div>
+  <a
+    href="#quote"
+    className="flex items-center gap-2 rounded-full bg-[#F4B000] px-4 py-3 text-xs font-black text-[#12343B] shadow-lg transition hover:scale-105 sm:px-5 sm:text-sm"
+  >
+    <CreditCard size={17} />
+    Quote
+  </a>
+</div>
 
         </nav>
 
